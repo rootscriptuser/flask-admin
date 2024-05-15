@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% from 'bootstrap4/nav.html' import render_nav_item %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">S50EV homepage</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        {{ render_nav_item('index', 'Home') }}
+        {{ render_nav_item('admin.index', 'Admin') }}
+        {{ render_nav_item('login', 'Login') }}
+        {{ render_nav_item('rpt', 'RPT') }}
+      </ul>
+    </div>
+  </div>
+</nav>
+           
+{% endblock %}
